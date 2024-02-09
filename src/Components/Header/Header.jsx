@@ -1,11 +1,10 @@
 import React from 'react'
 import classes from './heder.module.css'
+import {Link} from 'react-router-dom'
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
-
-
 
 function Header() {
   return (
@@ -13,6 +12,7 @@ function Header() {
       <section>
         <div className={classes.header_container}>
           <div className={classes.logo_container}>
+            {/* <Link to ="/"/> */}
             <a href="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
@@ -52,11 +52,11 @@ function Header() {
                 <p>Sign In</p>
                 <span>Account &lists</span>
               </a>
-              <a href="">
+              <a href="/orders">
                 <p>returns</p>
                 <span>&orders</span>
               </a>
-              <a href="" className={classes.cart}>
+              <a href="/cart" className={classes.cart}>
                 <BiCart size={35} />
                 <span>0</span>
               </a>
