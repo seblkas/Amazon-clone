@@ -6,11 +6,13 @@ import Product from '../../Components/Product/Product'
 
 function Landing() {
   return (
+    <div>
     <LayOut>
       <Carousel/>
       <Category/>
       <Product/> 
     </LayOut>
+    </div>
   )
 }
 

@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
-import LayOut from '../../Component/LayOut/LayOut'
-import { DataContext } from '../../Component/DataProvider/DataProvider'
-import ProductCart from '../../Component/Products/ProductCard'
-import CurrencyFormat from '../../Component/CurrencyFormat/CurrencyFormat';
-import { Link } from 'react-router-dom';
+import LayOut from '../../Components/LayOut/LayOut';
+import { DataContext } from '../../Components/DataProvider/DataProvider'
+import ProductCart from '../../Components/Product/ProductCard'
+import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
+// import { Link } from 'react-router-dom';
 import classes from './Cart.module.css'
 import { Type } from '../../Utility/action.type';
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Cart() {
+ function Cart() {
     const [{basket, user }, dispatch] = useContext(DataContext);
     const total = basket.reduce((amount, item) => {
         return item.price * item.amount + amount
@@ -48,11 +48,11 @@ function Cart() {
                     />
                         <div className={classes.btn_container} >
                             <button className={classes.btn} onClick={()=>increment(item)}>
-        <IoIosArrowUp size={20}/>
+        <IoIosArrowUp size={25}/>
                             </button>
                             <span>{item.amount}</span>
                             <button className={classes.btn} onClick={()=>decrement(item.id)}>
-        <IoIosArrowDown size={20}/>
+        <IoIosArrowDown size={25}/>
                             </button>
                             </div>
                     </section>
@@ -72,7 +72,7 @@ function Cart() {
             <input type="checkbox" />
             <small>This order contains a gift</small>
             </span>
-            <Link to="/payments">Continue to checkout</Link>
+            <a href="/payments">Continue to checkout</a>
         </div>
         
         )}
@@ -81,4 +81,4 @@ function Cart() {
         )
         }
 
-export default Cart
+ export default Cart

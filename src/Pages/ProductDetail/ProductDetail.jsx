@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import classes from './ProductDetail.module.css';
-import LayOut from '../../Component/LayOut/LayOut';
+import LayOut from '../../Components/LayOut/LayOut';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { productUrl } from '../../Api/endPoints';
-import ProductCard from '../../Component/Products/ProductCard';
-import Loader from '../../Component/Loader/Loader'; 
+import { producturl } from '../../Api/endPoints';
+import ProductCard from '../../Components/Product/ProductCard';
+import Loader from '../../Components/Loader/Loader'
 
-function ProductDetail({product,} ) {
+function ProductDetail() {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${productUrl}products/${productId}`)
+        axios.get(`${producturl}products/${productId}`)
             .then((res) => {
                 setProduct(res.data);
                 setIsLoading(false);

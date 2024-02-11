@@ -13,12 +13,13 @@ function CarouselEffect() {
    
    >
       {
-        img.map(imageItemLink=>{
+        img.map((imageItemLink)=>{
           return<img key={imageItemLink} src={imageItemLink}/>
         })
       }
 
      </Carousel>
+     <div className={classes.hero_img}></div>
 
   
 

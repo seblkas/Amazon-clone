@@ -1,15 +1,21 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import classes from './heder.module.css'
 import {Link} from 'react-router-dom'
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
-
-function Header() {
+import { DataContext } from '../DataProvider/DataProvider'
+ 
+const Header = () => {
+  const [{ user, basket},dispatch]=useContext(DataContext)
+  const totalItem = basket?.reduce((amount,item)=>{
+  return item.amount + amount
+},0)
   return (
-    <>
-      <section>
+    
+      <section className={classes.fixed}>
+        <section>
         <div className={classes.header_container}>
           <div className={classes.logo_container}>
             {/* <Link to ="/"/> */}
@@ -35,7 +41,8 @@ function Header() {
           <select name="" id="">
             <option value="">All</option>
           </select>
-          <input type="text" />"
+          <input type="text" Placeholder="Search Amazon" />
+
           <BsSearch size={25} />
         </div>
         <div className={classes.order_container}>
@@ -58,14 +65,14 @@ function Header() {
               </a>
               <a href="/cart" className={classes.cart}>
                 <BiCart size={35} />
-                <span>0</span>
+                <span>{totalItem}</span>
               </a>
             </div>
           </div>
         </section>
         <LowerHeader/>
       
-    </>
+    </section>
   );
 }
 
