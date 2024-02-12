@@ -2,7 +2,7 @@ import React, { useContext }  from 'react'
 import Rating from '@mui/material/Rating'
 import CurrencyFormat from '../CurrencyFormat/CurrencyFormat'
 import classes from './Product.module.css'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {DataContext} from '../DataProvider/DataProvider'
 import {Type} from "../../Utility/action.type"
 
@@ -27,9 +27,9 @@ function ProductCard({product, flex, renderDesc, renderAdd}) {
 
 return (
     <div  className={`${classes.card__container} ${flex?classes.product__flexed : ''}`}>
-        <a href={`/products/${id}`}>
+        <Link to={`/products/${id}`}>
             <img src={image} alt="" className={classes.img_container}/>
-        </a>
+        </Link>
         <div>
             <h3>{title}</h3>
 

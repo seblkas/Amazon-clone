@@ -1,9 +1,9 @@
 import React from 'react'
 import LayOut from '../../Components/LayOut/LayOut'
-import { Carousel } from 'react-responsive-carousel'
+// import { Carousel } from 'react-responsive-carousel'
 import Category from '../../Components/Category/Category'
 import Product from '../../Components/Product/Product'
-
+import Carousel from '../../Components/Carousel/Carousel'
 function Landing() {
   return (
     <div>

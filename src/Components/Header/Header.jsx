@@ -19,12 +19,12 @@ const Header = () => {
         <div className={classes.header_container}>
           <div className={classes.logo_container}>
             {/* <Link to ="/"/> */}
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon logo"
               />
-            </a>
+            </Link>
 
           <div className={classes.delivery}>
             <span>
@@ -46,7 +46,7 @@ const Header = () => {
           <BsSearch size={25} />
         </div>
         <div className={classes.order_container}>
-              <a href="" className={classes.language}>
+              <Link to="" className={classes.language}>
                 <img
                 src="https://pngimg.com/uploads/flags/flags_PNG14592.png"
                 alt=""
@@ -54,19 +54,19 @@ const Header = () => {
                 <select name="id=">
                   <option value="">EN</option>
                 </select>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <p>Sign In</p>
                 <span>Account &lists</span>
-              </a>
-              <a href="/orders">
+              </Link>
+              <Link to="/orders">
                 <p>returns</p>
                 <span>&orders</span>
-              </a>
-              <a href="/cart" className={classes.cart}>
+              </Link>
+              <Link to="/cart" className={classes.cart}>
                 <BiCart size={35} />
                 <span>{totalItem}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
