@@ -56,7 +56,9 @@ const Header = () => {
                   <option value="">EN</option>
                 </select>
               </Link>
-              <Link to="auth">
+              <Link to={!user && "/auth"} className={classes.signin_button}>
+
+              
                 <div>
                   {
                     user?(
