@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import LayOut from '../../Components/LayOut/LayOut';
 import { DataContext } from '../../Components/DataProvider/DataProvider'
 import ProductCart from '../../Components/Product/ProductCard'
-import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
-// import { Link } from 'react-router-dom';
+import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat'; 
+import { Link } from 'react-router-dom';
 import classes from './Cart.module.css'
 import { Type } from '../../Utility/action.type';
 import { IoIosArrowUp } from "react-icons/io";
@@ -72,7 +72,7 @@ import { IoIosArrowDown } from "react-icons/io";
             <input type="checkbox" />
             <small>This order contains a gift</small>
             </span>
-            <a href="/payments">Continue to checkout</a>
+            <Link to="/payments">Continue to checkout</Link>
         </div>
         
         )}

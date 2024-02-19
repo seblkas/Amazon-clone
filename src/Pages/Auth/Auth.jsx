@@ -34,7 +34,7 @@ function Auth() {
         // console.log (userInfo);
           dispatch({
           type: Type.SET_USER,
-           user:userInfo.user,
+         user:userInfo.user,
          });
          setLoading({...loading,signIn:false})
          navigate(navStateData?.state?.redirect || "/");
