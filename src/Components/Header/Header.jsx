@@ -44,7 +44,7 @@ const Header = () => {
           </select>
           <input type="text" Placeholder="Search Amazon" />
 
-          <BsSearch size={25} />
+          <BsSearch size={38} />
         </div>
         <div className={classes.order_container}>
               <Link to="" className={classes.language}>
